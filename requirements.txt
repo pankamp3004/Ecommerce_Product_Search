@@ -1,0 +1,12 @@
+elasticsearch
+
+sentence-transformers
+
+rapidfuzz
+
+langchain
+langgraph
+
+langchain-cerebras
+
+locust
