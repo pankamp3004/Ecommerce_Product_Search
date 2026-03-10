@@ -1,9 +1,13 @@
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import pandas as pd
 from psycopg2.extras import execute_values
 from indexing.db import get_pg_connection
 
 
-DATA_PATH = "data/Fashion Data mini.csv"
+DATA_PATH = "data/Fashion Data.csv"
 
 NUMERIC_COLS = ["selling_price", "mrp", "star_rating"]
 TEXT_COLS = ["title", "brand", "category", "colour"]

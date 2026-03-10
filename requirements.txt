@@ -1,4 +1,8 @@
 elasticsearch
+pandas
+nltk
+psycopg2-binary
+dotenv
 
 sentence-transformers
 
@@ -10,3 +14,6 @@ langgraph
 langchain-cerebras
 
 locust
+
+uvicorn
+fastapi

@@ -1,12 +1,11 @@
 from elasticsearch import Elasticsearch
-from db import get_pg_connection
-from category_normalizer import normalize_category
-from embeddings import embed_text
-from preprocess import preprocess
+from indexing.db import get_pg_connection
+from indexing.category_normalizer import normalize_category
+from indexing.embeddings import embed_text
+from indexing.preprocess import preprocess
 import math
 import os
 from dotenv import load_dotenv
-
 
 load_dotenv()
 
@@ -26,7 +25,7 @@ es = Elasticsearch(
 conn = get_pg_connection()
 cur = conn.cursor()
 
-cur.execute("""
+cur.execute(f"""
     SELECT
         product_id,
         title,
