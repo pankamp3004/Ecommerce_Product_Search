@@ -165,12 +165,12 @@ def hybrid_search(
         resolved_min_price
     )
 
-    print("🧠 Query Understanding")
+    print("Query Understanding")
     print("  Original Query:   ", query)
     print("  Resolved Brand:   ", resolved_brand)
     # print("  Resolved Category:", resolved_category)
-    print("  Resolved Min ₹:   ", resolved_min_price)
-    print("  Resolved Max ₹:   ", resolved_max_price)
+    print("  Resolved Min Rs:   ", resolved_min_price)
+    print("  Resolved Max Rs:   ", resolved_max_price)
     print("  Cleaned Query:    ", cleaned_query)
 
     # -----------------------------
@@ -178,7 +178,7 @@ def hybrid_search(
     # -----------------------------
 
     query_vector = embed_text(cleaned_query)
-    print(f"🔢 Vector dimension: {len(query_vector)}")
+    print(f"Vector dimension: {len(query_vector)}")
 
     # -----------------------------
     # 3. Strict Filters (BUSINESS LOGIC)
